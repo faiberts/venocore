@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FeaturesTabItem from "./FeaturesTabItem";
 import featuresTabData from "./featuresTabData";
 import { FeatureTab } from "@/types/featureTab";
@@ -16,6 +16,12 @@ export type FeaturesTabProps = {
 
 const FeaturesTab = ({ data, id }: FeaturesTabProps) => {
   const [currentTab, setCurrentTab] = useState(0);
+
+  useEffect(() => {
+    if (data.features.length >= 1) {
+      setCurrentTab(data.features[0].id);
+    }
+  }, [data.features]); 
 
   return (
     <>

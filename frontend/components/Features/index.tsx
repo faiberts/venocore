@@ -24,17 +24,15 @@ export const Features = ({ data, id }: FeaturesProps) => {
       <section id={`features-${id}`} className="py-20 lg:py-25 xl:py-30">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
-          {data.title ||
-            data.subtitle ||
-            (data.description && (
-              <SectionHeader
-                headerInfo={{
-                  title: data.title,
-                  subtitle: data.subtitle,
-                  description: data.description,
-                }}
-              />
-            ))}
+          {(data.title || data.subtitle || data.description) && (
+            <SectionHeader
+              headerInfo={{
+                title: data.title,
+                subtitle: data.subtitle,
+                description: data.description,
+              }}
+            />
+          )}
           {/* <!-- Section Title End --> */}
           {data.brands.length && <Brands data={data.brands} id={id} />}
           {data.features.length && (
@@ -42,7 +40,10 @@ export const Features = ({ data, id }: FeaturesProps) => {
               {/* <!-- Features item Start --> */}
 
               {data.features.map((feature, key) => (
-                <SingleFeature feature={feature} key={`${key}-${id}-${feature.id}-features`} />
+                <SingleFeature
+                  feature={feature}
+                  key={`${key}-${id}-${feature.id}-features`}
+                />
               ))}
               {/* <!-- Features item End --> */}
             </div>

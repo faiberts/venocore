@@ -1,0 +1,231 @@
+{
+    "components": [
+        {
+            "data": {
+                "header_title": "🔥 Solid - A Complete SaaS Web Template",
+                "title": "Free Next.js Template for SaaS",
+                "content": "Solid Pro - Packed with all the key integrations you need for swift SaaS startup launch, including - Auth, Database, Sanity Blog, Essential Components, Pages and More. Built-winth - Next.js 13, React 18 and TypeScript.",
+                "button_message": "Get Started",
+                "button_redirection": "#",
+                "type_button": "a",
+                "dark_image": "/images/hero/hero-dark.svg",
+                "light_image": "/images/hero/hero-light.svg",
+                "alt_image": "Hero",
+                "include_icons": true
+            },
+            "id": 1,
+            "type": "Hero"
+        },
+        {
+            "data": {
+                "title": "Innovación Tecnológica",
+                "subtitle": "Líderes en el sector",
+                "description": "Descubre nuestras soluciones innovadoras y cómo están transformando la industria.",
+                "brands": [
+                    {
+                        "id": 1,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-01.svg",
+                        "imageLight": "/images/brand/brand-dark-01.svg"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-02.svg",
+                        "imageLight": "/images/brand/brand-dark-02.svg"
+                    },
+                    {
+                        "id": 3,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-03.svg",
+                        "imageLight": "/images/brand/brand-dark-03.svg"
+                    },
+                    {
+                        "id": 4,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-04.svg",
+                        "imageLight": "/images/brand/brand-dark-04.svg"
+                    },
+                    {
+                        "id": 5,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-05.svg",
+                        "imageLight": "/images/brand/brand-dark-05.svg"
+                    },
+                    {
+                        "id": 6,
+                        "name": "Client",
+                        "href": "#",
+                        "image": "/images/brand/brand-light-06.svg",
+                        "imageLight": "/images/brand/brand-dark-06.svg"
+                    }
+                ],
+                "features": [
+                    {
+                        "id": 1,
+                        "icon": "/images/icon/icon-01.svg",
+                        "title": "Crafted for SaaS",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    },
+                    {
+                        "id": 2,
+                        "icon": "/images/icon/icon-02.svg",
+                        "title": "High-quality Design",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    },
+                    {
+                        "id": 3,
+                        "icon": "/images/icon/icon-03.svg",
+                        "title": "Next.js 13 + TypeScript",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    },
+                    {
+                        "id": 4,
+                        "icon": "/images/icon/icon-04.svg",
+                        "title": "Sanity Blog and Docs",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    },
+                    {
+                        "id": 5,
+                        "icon": "/images/icon/icon-05.svg",
+                        "title": "DB, Auth and Stripe",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    },
+                    {
+                        "id": 6,
+                        "icon": "/images/icon/icon-06.svg",
+                        "title": "Regular Free Updates",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+                    }
+                ]
+            },
+            "id": 2,
+            "type": "Features"
+        },
+        {
+            "data": {
+                "title": "Blog Destacados",
+                "subtitle": "Últimas actualizaciones",
+                "description": "Explora nuestros blogs más recientes sobre diversos temas de interés.",
+                "blogs": [
+                    {
+                        "_id": 1,
+                        "mainImage": "/images/blog/blog-01.png",
+                        "title": "Free advertising for your online business",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    },
+                    {
+                        "_id": 2,
+                        "mainImage": "/images/blog/blog-02.png",
+                        "title": "9 simple ways to improve your design skills",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    },
+                    {
+                        "_id": 3,
+                        "mainImage": "/images/blog/blog-03.png",
+                        "title": "Tips to quickly improve your coding speed.",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    },
+                    {
+                        "_id": 4,
+                        "mainImage": "/images/blog/blog-03.png",
+                        "title": "Free advertising for your online business",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    },
+                    {
+                        "_id": 5,
+                        "mainImage": "/images/blog/blog-04.png",
+                        "title": "9 simple ways to improve your design skills",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    },
+                    {
+                        "_id": 6,
+                        "mainImage": "/images/blog/blog-01.png",
+                        "title": "Tips to quickly improve your coding speed.",
+                        "metadata": "Lorem ipsum dolor sit amet, consectetur adipiscing elit convallis tortor."
+                    }
+                ]
+            },
+            "id": 3,
+            "type": "Blogs"
+        },
+        {
+            "data": {
+                "features": [
+                    {
+                        "id": "tabOne",
+                        "header": "Clean User Interface",
+                        "title": "Solid Has Neat & Clean User Interface.",
+                        "desc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.",
+                        "desc2": "Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.",
+                        "image": "/images/features/features-light-01.png",
+                        "imageDark": "/images/features/features-dark-01.svg"
+                    },
+                    {
+                        "id": "tabTwo",
+                        "header": "Essential Business Pages",
+                        "title": "Ready to Use Pages You Need for a SaaS Business.",
+                        "desc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.",
+                        "desc2": "Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.",
+                        "image": "/images/features/features-light-01.png",
+                        "imageDark": "/images/features/features-dark-01.svg"
+                    },
+                    {
+                        "id": "tabThree",
+                        "header": "Fully Functional Integrations",
+                        "title": "Functional Blog, DB, Auth and Many More",
+                        "desc1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.",
+                        "desc2": "Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.",
+                        "image": "/images/features/features-light-01.png",
+                        "imageDark": "/images/features/features-dark-01.svg"
+                    }
+                ]
+            },
+            "id": 1,
+            "type": "FeaturesTab"
+        },
+        {
+            "data": {
+                "title": "Join With Us Today & Increase Your Productivity",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus..",
+                "image": "/images/shape/shape-06.png"
+            },
+            "id": 1,
+            "type": "CTA"
+        },
+        {
+            "data": {
+              "header": "OUR FAQS",
+              "title": "Frequently AskedcQuestions",
+              "button_message": "Know More",
+              "button_redirection": "#",
+              "button_type": "a",
+              "faqs": [
+                {
+                  "id": 1,
+                  "quest": "Lorem ipsum dolor sit amet, consectetur",
+                  "ans": "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences."
+                },
+                {
+                  "id": 2,
+                  "quest": "Lorem ipsum dolor sit amet, consectetur",
+                  "ans": "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences."
+                },
+                {
+                  "id": 3,
+                  "quest": "Lorem ipsum dolor sit amet, consectetur",
+                  "ans": "We provide digital experience services to startups and small businesses. We help our clients succeed by creating brand identities, digital experiences."
+                }
+              ]
+            },
+            "id": 1,
+            "type": "FAQ"
+          }
+
+    ]
+}

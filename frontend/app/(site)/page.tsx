@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Hero from "@/components/Hero";
+import SelectComponent from "@/components/SelectComponent";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
 import About from "@/components/About";
@@ -12,6 +12,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blogs from "@/components/Blogs";
 import Testimonial from "@/components/Testimonial";
+import initData from '../../data/testData.json';
 
 export const metadata: Metadata = {
   title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
@@ -21,16 +22,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
 
-
-
   return (
     <main>
-      {/* <Hero />
-      <Feature />
-      <Blogs />
-      <FeaturesTab />
-      <CTA />
-      <FAQ /> */}
+      {initData.components.map((component, index) => { 
+        return <SelectComponent
+          key={index}
+          componentType={component.type}
+          data={component.data}
+          id={index}
+        />
+      })}
     </main>
   );
 }
