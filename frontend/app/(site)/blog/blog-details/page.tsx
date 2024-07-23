@@ -1,4 +1,3 @@
-import RelatedPost from "@/components/Blogs/RelatedPost";
 import SharePost from "@/components/Blogs/SharePost";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -71,11 +70,14 @@ const SingleBlogPage = async () => {
                 </ul>
               </div>
 
-              <RelatedPost />
             </div>
 
             <div className="lg:w-2/3">
               <div className="animate_top rounded-md border border-stroke bg-white p-7.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-10">
+                <div className="mb-10">
+                  <SharePost />
+                </div>
+
                 <div className="mb-10 w-full overflow-hidden ">
                   <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                     <Image
@@ -158,8 +160,6 @@ const SingleBlogPage = async () => {
                     non, interdum ipsum.
                   </p>
                 </div>
-
-                <SharePost />
               </div>
             </div>
           </div>

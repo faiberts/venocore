@@ -2,7 +2,7 @@
 import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
-import SectionHeader from "../Common/SectionHeader";
+import SectionHeader from "@/components/Common/SectionHeader";
 import Brands, { BrandsProps } from "../Brands";
 import { Feature } from "@/types/feature";
 

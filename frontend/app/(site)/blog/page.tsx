@@ -1,29 +1,99 @@
-import BlogData from "@/components/Blogs/blogData";
-import BlogItem from "@/components/Blogs/BlogItem";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
-  description: "This is Blog page for Solid Pro",
-  // other metadata
-};
+import { useState, useEffect, useCallback } from "react";
+import { fetchAPI } from "@/utils/fetch-api";
 
-const BlogPage = async () => {
+import Loader from "@/components/Loader";
+import SectionHeader from "@/components/Common/SectionHeader";
+import PostList from "@/components/PostList";
+
+interface Meta {
+  pagination: {
+    start: number;
+    limit: number;
+    total: number;
+  };
+}
+
+export default function BlogPage() {
+  const [meta, setMeta] = useState<Meta | undefined>();
+  const [data, setData] = useState<any>([]);
+  const [isLoading, setLoading] = useState(true);
+
+  const fetchData = useCallback(async (start: number, limit: number) => {
+    setLoading(true);
+    try {
+      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
+      const path = `/articles`;
+      const urlParamsObject = {
+        sort: { createdAt: "desc" },
+        populate: {
+          cover: { fields: ["url"] },
+          category: { populate: "*" },
+          authorsBio: {
+            populate: "*",
+          },
+        },
+        pagination: {
+          start: start,
+          limit: limit,
+        },
+      };
+      const options = { headers: { Authorization: `Bearer ${token}` } };
+      const responseData = await fetchAPI(path, urlParamsObject, options);
+
+      if (start === 0) {
+        setData(responseData.data);
+      } else {
+        setData((prevData: any[]) => [...prevData, ...responseData.data]);
+      }
+
+      setMeta(responseData.meta);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  function loadMorePosts(): void {
+    const nextPosts = meta!.pagination.start + meta!.pagination.limit;
+    fetchData(nextPosts, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
+  }
+
+  useEffect(() => {
+    fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
+  }, [fetchData]);
+
+  if (isLoading) return <Loader />;
+
   return (
     <>
       {/* <!-- ===== Blog Grid Start ===== --> */}
       <section className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto mt-15 max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-          <div className="grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-            {BlogData.map((post, key) => (
-              <BlogItem key={key} blog={post} />
-            ))}
-          </div>
-        </div>
+        <SectionHeader
+          headerInfo={{
+            title: null,
+            description: "Checkout Something Cool",
+            subtitle: "Our Blog",
+          }}
+        />
+        <PostList data={data}>
+          {meta!.pagination.start + meta!.pagination.limit <
+            meta!.pagination.total && (
+            <div className="flex justify-center">
+              <button
+                type="button"
+                className="px-6 py-3 text-sm rounded-lg hover:underline dark:bg-gray-900 dark:text-gray-400"
+                onClick={loadMorePosts}
+              >
+                Load more posts...
+              </button>
+            </div>
+          )}
+        </PostList>
       </section>
       {/* <!-- ===== Blog Grid End ===== --> */}
     </>
   );
 };
-
-export default BlogPage;
